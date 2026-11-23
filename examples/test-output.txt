@@ -1,0 +1,27 @@
+workdir: /tmp/axis-doctor-tests-070ur038
+blender: /home/hatch/workspace/tools/blender-4.2.3-linux-x64/blender
+PASS  T1 fixture exported  
+PASS  T1 roundtrip value-identical  elements=249 mismatches=0 []
+PASS  T2 GenGown before  {'verts': 17716, 'tris': 34663, 'slivers': 3, 'world_bounds_min': [-0.4965, -0.2379, -0.0], 'world_bounds_max': [0.6208, 0.3086, 1.3251]}
+PASS  T2 GenGown cleanup  {'polygons_deleted': 3, 'tris_after': 34660, 'slivers_after': 0, 'surviving_check': {'method': 'max-deviation', 'value': 5.4889827350024234e-08}}
+PASS  T2 GenGown bake preservation  {'method': 'max-deviation', 'value': 5.4889827350024234e-08} (evaluation measured 5.5e-08)
+PASS  T2 GenGown floored at y=0  [-0.4965, 0.0, -0.3086]..[0.6208, 1.3251, 0.2379]
+PASS  T2 GenGown root identity  {'Lcl Translation': None, 'Lcl Rotation': [0.0, 0.0, 0.0], 'Lcl Scaling': [1.0, 1.0, 1.0]}
+PASS  T2 GenGown globals  {'UpAxis': 1, 'UpAxisSign': 1, 'FrontAxis': 2, 'FrontAxisSign': 1, 'CoordAxis': 0, 'CoordAxisSign': 1, 'UnitScaleFactor': 100.0}
+PASS  T2 GenGown fold geometry identical  
+PASS  T2 GenGown file geometry  {'name': 'node_0.001', 'verts': 17716, 'tris': 34660, 'slivers': 0, 'bounds_min': [-0.4965, 0.0, -0.3086], 'bounds_max': [0.6208, 1.3251, 0.2379], 'tri_hash': 'f8bac049fd541850e749c7c6da11c8e8429ac6e37b1265163ac829b9d2e8376b'}
+PASS  T3 Face before  {'verts': 1163, 'tris': 1958, 'slivers': 124, 'world_bounds_min': [-0.0866, -0.0436, 1.3489], 'world_bounds_max': [0.0866, 0.0811, 1.5359]}
+PASS  T3 Face cleanup  {'polygons_deleted': 124, 'tris_after': 1834, 'slivers_after': 0, 'surviving_check': {'method': 'exact-hash', 'value': 0.0}}
+PASS  T3 Face bake exact-hash  {'method': 'exact-hash', 'value': 0.0}
+PASS  T3 Face surviving exact-hash  {'method': 'exact-hash', 'value': 0.0}
+PASS  T3 Face root identity  {'Lcl Translation': None, 'Lcl Rotation': [0.0, 0.0, 0.0], 'Lcl Scaling': [1.0, 1.0, 1.0]}
+PASS  T3 Face globals  {'UpAxis': 1, 'UpAxisSign': 1, 'FrontAxis': 2, 'FrontAxisSign': 1, 'CoordAxis': 0, 'CoordAxisSign': 1, 'UnitScaleFactor': 100.0}
+PASS  T3 Face file geometry  {'name': 'Mesh.002', 'verts': 1044, 'tris': 1834, 'slivers': 0, 'bounds_min': [-0.0866, 1.3489, -0.0811], 'bounds_max': [0.0866, 1.5359, 0.0436], 'tri_hash': '6476ba5f447f063aeddd8ee37d848004b35d03d7a981a0b0775e383a7dc7d7ff'} (119 sliver-only verts dropped by the exporter)
+PASS  T4 reimport gengown  {'scale': [1.0, 1.0, 1.0], 'slivers': 0}
+PASS  T4 reimport face  {'scale': [1.0, 1.0, 1.0], 'slivers': 0}
+PASS  T5 no-op slivers stay 0  {'polygons_deleted': 0, 'tris_after': 1834, 'slivers_after': 0, 'surviving_check': {'method': 'exact-hash', 'value': 0.0}}
+PASS  T5 no-op geometry unchanged  {'method': 'exact-hash', 'value': 0.0}
+PASS  T5 no-op file geometry matches  {'name': 'Mesh.002', 'verts': 1044, 'tris': 1834, 'slivers': 0, 'bounds_min': [-0.0866, 1.3489, -0.0811], 'bounds_max': [0.0866, 1.5359, 0.0436], 'tri_hash': 'a0fda5757ca78f45bb1a188653ee1e6f8fff67e3c1721aa3500199175406a9b1'} vs {'name': 'Mesh.002', 'verts': 1044, 'tris': 1834, 'slivers': 0, 'bounds_min': [-0.0866, 1.3489, -0.0811], 'bounds_max': [0.0866, 1.5359, 0.0436], 'tri_hash': '6476ba5f447f063aeddd8ee37d848004b35d03d7a981a0b0775e383a7dc7d7ff'}
+PASS  T5 no-op root identity  
+
+23/23 PASS
